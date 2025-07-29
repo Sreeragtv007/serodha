@@ -1,3 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coming Soon</title>
+  <style>
+    :root {
+      --primary: #00c6ff;
+      --secondary: #0072ff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(-45deg, var(--primary), var(--secondary), #00c6ff, #0072ff);
+      background-size: 400% 400%;
+      animation: gradient 10s ease infinite;
+      color: white;
+      text-align: center;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .container {
+      animation: fadeIn 2s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 10px;
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .email-form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    input[type="email"] {
+      padding: 10px;
+      width: 250px;
+      border-radius: 25px;
+      border: none;
+      outline: none;
+    }
+
+    button {
+      padding: 10px 20px;
+      border-radius: 25px;
+      border: none;
       background: white;
       color: var(--secondary);
       font-weight: bold;
@@ -21,8 +109,11 @@
   <div class="container">
     <h1>Coming Soon</h1>
     <p>We're working hard to launch something amazing.</p>
-    
-  </div>
-  <footer>sreeragtv009@gmail.com</footer>
+    <form class="email-form">
+      <input type="email" placeholder="Your email" required />
+      <button type="submit">Notify Me</button>
+    </form>
+  </div>
+  <footer>&copy;All rights reserved.</footer>
 </body>
 </html>
